@@ -52,7 +52,7 @@ let package = Package(
             path: "GRDB",
             resources: [.copy("PrivacyInfo.xcprivacy")],
             cSettings: cSettings,
-            swiftSettings: swiftSettings),
+            swiftSettings: swiftSettings + [.unsafeFlags(["-enable-library-evolution"])]),
         .testTarget(
             name: "GRDBTests",
             dependencies: ["GRDB"],
